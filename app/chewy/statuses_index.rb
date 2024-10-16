@@ -36,7 +36,7 @@ class StatusesIndex < Chewy::Index
       },
 
       content: {
-        tokenizer: 'keyword',
+        tokenizer: 'ik_max_word',
         filter: %w(
           lowercase
           asciifolding
