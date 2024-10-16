@@ -12,6 +12,7 @@ class TagsIndex < Chewy::Index
         convert_type: 't2s',
       },
     },
+    
     analyzer: {
       content: {
         tokenizer: 'keyword',

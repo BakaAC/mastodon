@@ -21,6 +21,15 @@ class AccountsIndex < Chewy::Index
       },
     },
 
+    char_filter: {
+        tsconvert: {
+          type: 'stconvert',
+          keep_both: false,
+          delimiter: '#',
+          convert_type: 't2s',
+        },
+      },
+
     analyzer: {
       natural: {
         tokenizer: 'standard',
@@ -33,6 +42,7 @@ class AccountsIndex < Chewy::Index
           english_stop
           english_stemmer
         ),
+        char_filter: %w(tsconvert),
       },
 
       verbatim: {
