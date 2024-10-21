@@ -22,13 +22,13 @@ class AccountsIndex < Chewy::Index
     },
 
     char_filter: {
-        tsconvert: {
-          type: 'stconvert',
-          keep_both: false,
-          delimiter: '#',
-          convert_type: 't2s',
-        },
+      tsconvert: {
+        type: 'stconvert',
+        keep_both: false,
+        delimiter: '#',
+        convert_type: 't2s',
       },
+    },
 
     analyzer: {
       natural: {
