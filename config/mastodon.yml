@@ -7,5 +7,5 @@ shared:
     repository: <%= ENV.fetch('GITHUB_REPOSITORY', 'TheEssem/mastodon') %>
     tag: <%= ENV.fetch('SOURCE_TAG', nil) %>
   version:
-    metadata: <%= ['chuckya', ENV.fetch('MASTODON_VERSION_METADATA', nil)].compact_blank.join('.') %>
+    metadata: <%= ['cirno', ENV.fetch('MASTODON_VERSION_METADATA', nil)].compact_blank.join('.') %>
     prerelease: <%= ENV.fetch('MASTODON_VERSION_PRERELEASE', nil) %>
