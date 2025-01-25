@@ -4,7 +4,8 @@ In simple terms, it is a Chuckya fork used on Baka.Ink.
 
 Here are some of the changes compared to this version:
 
-- Word limit has been revised to 5,000
+- Some of the default values have been increased
+- [Chinese Search Optimization](/CHINESE_SEARCH.md) ([#4](https://github.com/BakaAC/mastodon/pull/4))
 
 Original Chuckya readme is below.
 
