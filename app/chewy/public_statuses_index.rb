@@ -32,7 +32,7 @@ class PublicStatusesIndex < Chewy::Index
     
     analyzer: {
       verbatim: {
-        tokenizer: 'uax_url_email',
+        tokenizer: 'ik_max_word',
         filter: %w(lowercase),
       },
 
