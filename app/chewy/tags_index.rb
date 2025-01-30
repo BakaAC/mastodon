@@ -14,7 +14,7 @@ class TagsIndex < Chewy::Index
     },
     analyzer: {
       content: {
-        tokenizer: 'ik_max_word',
+        tokenizer: 'ik_smart',
         filter: %w(
           word_delimiter_graph
           lowercase
