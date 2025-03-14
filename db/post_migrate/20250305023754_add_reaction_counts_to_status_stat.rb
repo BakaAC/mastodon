@@ -1,21 +1,13 @@
 # frozen_string_literal: true
 
 class AddReactionCountsToStatusStat < ActiveRecord::Migration[8.0]
-  disable_ddl_transaction!
-
   def up
-    Status.unscoped.includes(:status_stat).find_each do |status|
-      status.status_stat.tap do |status_stat|
-        reaction_count = status.status_reactions.count
-        if reaction_count.positive?
-          status_stat.reactions_count = reaction_count
-          status_stat.save
-        end
-      end
+    Status.unscoped.joins(:status_reactions).distinct.select('statuses.id AS id, COUNT(status_reactions.*) as reaction_count').group('statuses.id').in_batches do |statuses|
+      StatusStat.upsert_all(statuses.map { |status| { status_id: status.id, reactions_count: status.reaction_count } }, unique_by: :status_id)
     end
   end
 
   def down
-    StatusStat.unscoped.in_batches.update_all(reactions_count: 0)
+    StatusStat.unscoped.where('reactions_count > 0').in_batches.update_all(reactions_count: 0)
   end
 end
