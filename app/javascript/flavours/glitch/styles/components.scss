@@ -1955,27 +1955,19 @@ body > [data-popper-placement] {
 }
 
 .domain {
-  padding: 10px;
+  padding: 16px;
   border-bottom: 1px solid var(--background-border-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
 
-  .domain__domain-name {
+  &__domain-name {
     flex: 1 1 auto;
-    display: block;
     color: $primary-text-color;
-    text-decoration: none;
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 21px;
     font-weight: 500;
   }
-}
-
-.domain__wrapper {
-  display: flex;
-}
-
-.domain_buttons {
-  height: 18px;
-  padding: 10px;
-  white-space: nowrap;
 }
 
 .account {
@@ -5640,6 +5632,9 @@ a.status-card {
 
     &__results {
       &__item {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
         cursor: pointer;
         color: $primary-text-color;
         font-size: 14px;
@@ -6647,7 +6642,7 @@ a.status-card {
 
     a {
       text-decoration: none;
-      color: $inverted-text-color;
+      color: $highlight-text-color;
       font-weight: 500;
 
       &:hover {
@@ -8010,14 +8005,11 @@ img.modal-warning {
 }
 
 .radio-button__input.checked::before {
-  position: absolute;
-  left: 2px;
-  top: 2px;
   content: '';
   display: block;
   border-radius: 50%;
-  width: 12px;
-  height: 12px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
   background: $ui-highlight-color;
 }
 
@@ -8552,13 +8544,9 @@ noscript {
   &__item {
     display: flex;
     align-items: center;
-    padding: 15px;
+    padding: 16px;
     border-bottom: 1px solid var(--background-border-color);
-    gap: 15px;
-
-    &:last-child {
-      border-bottom: 0;
-    }
+    gap: 8px;
 
     &__name {
       flex: 1 1 auto;
@@ -8665,7 +8653,7 @@ noscript {
   }
 
   &--compact &__item {
-    padding: 10px;
+    padding: 12px;
   }
 }
 
