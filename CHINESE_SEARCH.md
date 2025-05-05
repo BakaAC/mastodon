@@ -75,4 +75,4 @@ docker-compose run --rm web bin/tootctl search deploy
 
 ## 参考
 
-[进阶魔改：修改字数上限、媒体上限、投票上限、添加自定义主题、界面用语、非登陆用户有限显示、优化中文搜索，附阻止本站嘟文流入某站点方法 - 技术小白搭建Mastodon站点指南] (https://pullopen.github.io/%E8%BF%9B%E9%98%B6%E9%AD%94%E6%94%B9/2020/11/14/mastodon-modify.html#docker%E5%AE%89%E8%A3%85%E4%BC%98%E5%8C%96%E4%B8%AD%E6%96%87%E6%90%9C%E7%B4%A22022-04-25%E6%96%B0%E5%A2%9E)
+[进阶魔改：修改字数上限、媒体上限、投票上限、添加自定义主题、界面用语、非登陆用户有限显示、优化中文搜索，附阻止本站嘟文流入某站点方法 - 技术小白搭建Mastodon站点指南](https://pullopen.github.io/%E8%BF%9B%E9%98%B6%E9%AD%94%E6%94%B9/2020/11/14/mastodon-modify.html#docker%E5%AE%89%E8%A3%85%E4%BC%98%E5%8C%96%E4%B8%AD%E6%96%87%E6%90%9C%E7%B4%A22022-04-25%E6%96%B0%E5%A2%9E)
