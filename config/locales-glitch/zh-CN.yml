@@ -42,5 +42,13 @@ zh-CN:
       title: 用户验证
   generic:
     use_this: 使用这个
+  gif:
+    errors:
+      too_many_requests: 一段时间内搜索 GIF 的请求过多。
+  notification_mailer:
+    reaction:
+      body: "%{name} 对你的嘟文进行了表态:"
+      subject: "%{name} 对你的嘟文进行了表态"
+      title: 新表态
   settings:
     flavours: 风格

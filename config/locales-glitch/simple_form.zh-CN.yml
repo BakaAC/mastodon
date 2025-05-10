@@ -15,6 +15,8 @@ zh-CN:
         setting_skin: 更换为所选择的 Mastodon 风格
     labels:
       defaults:
+        avatar_description: 头像描述
+        header_description: 封面图描述
         setting_default_content_type: 嘟文默认格式
         setting_default_content_type_html: HTML
         setting_default_content_type_markdown: Markdown
@@ -23,7 +25,9 @@ zh-CN:
         setting_show_followers_count: 显示粉丝数
         setting_skin: 皮肤
         setting_system_emoji_font: 使用系统自带表情 (仅限于 Glitch 风格)
+        setting_visible_reactions: 表情表态数量
       notification_emails:
+        reaction: 有人对你的嘟文进行了表情表态
         trending_link: 新热门链接需要审核
         trending_status: 新热门嘟文需要审核
         trending_tag: 新热门话题需要审核
