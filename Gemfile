@@ -74,7 +74,7 @@ gem 'premailer-rails'
 gem 'public_suffix', '~> 6.0'
 gem 'pundit', '~> 2.3'
 gem 'rack-attack', '~> 6.6'
-gem 'rack-cors', '~> 2.0', require: 'rack/cors'
+gem 'rack-cors', require: 'rack/cors'
 gem 'rails-i18n', '~> 8.0'
 gem 'redcarpet', '~> 3.6'
 gem 'redis', '~> 4.5', require: ['redis', 'redis/connection/hiredis']
@@ -111,7 +111,7 @@ group :opentelemetry do
   gem 'opentelemetry-instrumentation-active_model_serializers', '~> 0.22.0', require: false
   gem 'opentelemetry-instrumentation-concurrent_ruby', '~> 0.22.0', require: false
   gem 'opentelemetry-instrumentation-excon', '~> 0.23.0', require: false
-  gem 'opentelemetry-instrumentation-faraday', '~> 0.26.0', require: false
+  gem 'opentelemetry-instrumentation-faraday', '~> 0.27.0', require: false
   gem 'opentelemetry-instrumentation-http', '~> 0.24.0', require: false
   gem 'opentelemetry-instrumentation-http_client', '~> 0.23.0', require: false
   gem 'opentelemetry-instrumentation-net_http', '~> 0.23.0', require: false
@@ -202,7 +202,7 @@ group :development, :test do
   gem 'faker', '~> 3.2'
 
   # Generate factory objects
-  gem 'fabrication', '~> 2.30'
+  gem 'fabrication'
 
   # Profiling tools
   gem 'memory_profiler', require: false

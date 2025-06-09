@@ -42,8 +42,8 @@ import { FollowButton } from 'flavours/glitch/components/follow_button';
 import { FormattedDateWrapper } from 'flavours/glitch/components/formatted_date';
 import { Icon } from 'flavours/glitch/components/icon';
 import { IconButton } from 'flavours/glitch/components/icon_button';
+import { AccountNote } from 'flavours/glitch/features/account/components/account_note';
 import { DomainPill } from 'flavours/glitch/features/account/components/domain_pill';
-import AccountNoteContainer from 'flavours/glitch/features/account/containers/account_note_container';
 import FollowRequestNoteContainer from 'flavours/glitch/features/account/containers/follow_request_note_container';
 import { useLinks } from 'flavours/glitch/hooks/useLinks';
 import { useIdentity } from 'flavours/glitch/identity_context';
@@ -878,7 +878,7 @@ export const AccountHeader: React.FC<{
             >
               <Avatar
                 account={suspended || hidden ? undefined : account}
-                size={90}
+                size={92}
               />
             </a>
 
@@ -917,7 +917,7 @@ export const AccountHeader: React.FC<{
             <div className='account__header__badges'>{badges}</div>
           )}
 
-          {account.id !== me && signedIn && (
+          {account.id !== me && signedIn && !(suspended || hidden) && (
             <FamiliarFollowers accountId={accountId} />
           )}
 
@@ -928,7 +928,7 @@ export const AccountHeader: React.FC<{
                 onClickCapture={handleLinkClick}
               >
                 {account.id !== me && signedIn && (
-                  <AccountNoteContainer accountId={accountId} />
+                  <AccountNote accountId={accountId} />
                 )}
 
                 {account.note.length > 0 && account.note !== '<p></p>' && (
